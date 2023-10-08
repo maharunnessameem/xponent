@@ -16,13 +16,21 @@ const page = async () => {
     return (
         <div>
             <h1 className="text-4xl">Post Page</h1>
-            <h2 className="text-2xl">Users</h2>
+            {/* <h2 className="text-2xl">Users</h2> */}
             <ul className="flex flex-col gap-5">
                 {
                     posts.map(post => (
                         <Link key={post.id} href={`/posts/${post.id}`}>
                             <li className="bg-gray-100 p-5 cursor-pointer">
                                 <h4 className="text-xl font-bold">{post.title}</h4>
+
+
+                                {/* {
+                                    users.map((user, index) => (
+                                        <p key={index}>{user.name}</p>
+                                    ))
+                                } */}
+
                                 <p>{post.body}</p>
                             </li>
                         </Link>
