@@ -17,15 +17,20 @@ const Header = () => {
         {
             label: "About",
             href: "/about"
+        },
+        {
+            label: "Create",
+            href: "/create"
         }
     ]
 
     return (
-        <div>
-            <ul className='flex gap-5 py-10 '>
+        <div className='shadow-md mb-10'
+        >
+            <ul className='flex gap-5 py-10 px-10'>
                 {
                     navItems.map((link, index) => (
-                        <li key={index}>
+                        <li key={index} className='hover:font-bold'>
                             <Link href={link.href} className={pathname === `${link.href}` ? "text-blue-500 fonnt-bold" : ''}>
                                 {link.label}</Link>
                         </li>
