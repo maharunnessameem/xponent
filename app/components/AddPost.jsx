@@ -48,6 +48,14 @@ const AddPost = () => {
                     />
                     <input
                         type="text"
+                        placeholder='category'
+                        name="category"
+                        className='w-full p-2 mt-5'
+                        value={inputs.category || ""}
+                        onChange={handleChange}
+                    />
+                    <input
+                        type="text"
                         placeholder='description'
                         name="description"
                         className='w-full p-2 my-5'

@@ -49,10 +49,12 @@ const Post = ({ post }) => {
 
 
     return (
-        <li className='p-3 my-5 bg-slate-200' key={post.id}>
-            <h1 className='text-2xl font-bold'>{post.title}</h1>
-            <p>{post.description}</p>
-            {/* <div className='pt-5'>
+        <div >
+            <li className='p-3 my-5 bg-slate-200' key={post.id}>
+                <h1 className='text-2xl font-bold'>{post.title}</h1>
+                <p><small><span className="font-bold">Category:</span>{post.category}</small></p>
+                <p>{post.description}</p>
+                {/* <div className='pt-5'>
                 <button className='text-blue-700 mr-3' onClick={() => setOpenModalEdit(true)}>Edit</button>
 
                 <Modal modalOpen={openModalEdit} setModalOpen={setOpenModalEdit}>
@@ -91,7 +93,8 @@ const Post = ({ post }) => {
                     </div>
                 </Modal>
             </div> */}
-        </li>
+            </li>
+        </div>
     );
 };
 

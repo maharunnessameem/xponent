@@ -15,12 +15,12 @@ const Create = async () => {
     const posts = await getData();
     console.log(posts);
     return (
-        <div className="max-w-4xl mx-auto mt-4">
-            <div className="my-5 flex flex-col gap-4">
+        <div className=" mt-4 ">
+            <div className="my-5 grid grid-4 gap-4">
                 <h1>Posts</h1>
                 <AddPost></AddPost>
             </div>
-            <PostList posts={posts}></PostList>
+            <PostList posts={posts} className="mr-20"></PostList>
 
         </div>
     );
